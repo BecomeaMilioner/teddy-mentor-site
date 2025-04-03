@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teddy's Exclusive* Headwear Collection ($MENTOR Merch)</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="mentor_coin_logo_512.png">
+  <style>
+    .shop-header {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.2);
+      border-radius: var(--border-radius-main);
+    }
+    .shop-header h1 {
+      color: var(--accent-light);
+      font-size: clamp(2em, 5vw, 3em);
+      text-shadow: 2px 2px #000;
+      margin-bottom: 10px;
+    }
+     .shop-header p {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.1em;
+        color: rgba(255, 255, 255, 0.9);
+     }
+
+    .product-grid {
+      display: grid;
+      /* Adjust grid columns based on screen size */
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background-color: rgba(0, 0, 0, 0.25);
+      border-radius: var(--border-radius-main);
+      padding: 20px;
+      text-align: center;
+      border: 1px solid var(--accent-dark);
+      box-shadow: var(--box-shadow-light);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--box-shadow-heavy);
+    }
+
+    .product-image {
+      max-width: 80%; /* Adjust as needed */
+      height: auto;
+      border-radius: 10px; /* Or 50% if you want round images */
+      margin-bottom: 15px;
+      /* Using the uploaded logo for all hats for now */
+      /* Add border or background if needed */
+      border: 2px solid var(--accent-light);
+      background-color: rgba(255,255,255,0.1); /* Slight background for visibility */
+    }
+
+    .product-card h3 {
+      color: var(--button-gimmick-bg);
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.4em;
+    }
+
+    .product-description {
+      font-size: 0.95em;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 15px;
+      min-height: 60px; /* Adjust for consistent card height */
+    }
+
+    .product-price {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: var(--accent-light);
+      margin-bottom: 20px;
+    }
+
+    .buy-button {
+      /* Use existing cta-button styles, maybe different color? */
+      /* Example: Inherit and change background */
+      background: var(--accent-dark); /* Example color */
+      color: var(--text-light);
+      padding: 10px 25px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+      text-decoration: none; /* If using <a> tag */
+      display: inline-block;
+    }
+    .buy-button:hover {
+      background: var(--accent-light); /* Example hover color */
+      color: var(--text-dark);
+    }
+  </style>
+</head>
+<body>
+  <header class="animated fadeInDown">
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <img src="mentor_coin_logo_512.png" alt="MENTOR Coin Logo" class="logo floating-logo" />
+        <h1>$MENTOR</h1>
+    </a>
+    </header>
+
+  <main>
+    <section class="shop-header animated fadeInUp">
+        <h1>Teddy's Exclusive Headwear Collection</h1>
+        <p>Why settle for thinking like a millionaire when you can LOOK like one (who bought a ridiculously priced cap)? Each cap is personally designed by Teddy The Mentor to boost your alpha, synergize your hustle, and most importantly, fund Teddy's lavish lifestyle. Get yours before they're... well, they'll always be available if you pay enough.</p>
+        <small>*Exclusivity and personal design not guaranteed. Or real.</small>
+    </section>
+
+    <section class="product-grid animated fadeInUp">
+
+      <div class="product-card">
+        <img src="H1.png" alt="The Alpha Mindset Cap" class="product-image">
+        <h3>The Alpha Mindset Cap</h3>
+        <p class="product-description">Warning: Wearing this may cause uncontrollable urges to give unsolicited advice and buy high/sell low. Infused with pure* alpha energy.</p>
+        <p class="product-price">Price: 50M $MENTOR</p>
+        <a href="https://pump.fun/coin/99xYRn1dq9aaHWPi9M2QmrvGL1cbLrmZ6UdE5M4Spump" target="_blank" rel="noopener noreferrer" class="buy-button">Buy Now!</a>
+      </div>
+
+      <div class="product-card">
+         <img src="H2.png" alt="The Lambo Manifestation Lid" class="product-image">
+         <h3>The Lambo Manifestation Lid</h3>
+         <p class="product-description">Visually proven* to increase your chances of *seeing* a Lambo by 100%. (*Teddy saw one while wearing this). Side effects: Delusions of grandeur.</p>
+         <p class="product-price">Price: 75M $MENTOR</p>
+         <a href="https://t.me/Teddy_Mentor" target="_blank" rel="noopener noreferrer" class="buy-button">Join Cult!</a>
+      </div>
+
+      <div class="product-card">
+          <img src="H3.png" alt="The Diamond Hands Dome Piece" class="product-image">
+          <h3>The Diamond Hands Dome Piece</h3>
+          <p class="product-description">Forged in the fires of... well, a factory probably. Makes your hands feel diamond-y* even when panic selling. (*Placebo effect not included).</p>
+          <p class="product-price">Only $997 USD ( Bargain! )</p>
+          <button class="buy-button" onclick="alert('SOLD OUT! Just kidding... but maybe buy some $MENTOR instead?')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+          <img src="H4.png" alt="The Synergy Snapback" class="product-image">
+          <h3>The Synergy Snapback</h3>
+          <p class="product-description">Maximize your synergistic potential!* Perfect for looking busy in Zoom calls while actually trading $MENTOR. (*Synergistic potential is undefined).</p>
+          <p class="product-price">Price: Priceless* (*Requires 100M $MENTOR)</p>
+          <a href="webinar.html" class="buy-button">Learn More!</a>
+      </div>
+
+      </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 $MENTOR – Stop being poor, start laughing. Definitely Not Financial Advice. Like, at all.</p>
+    <p>
+        <a href="#">Terms of Service (Non-existent)</a> | <a href="#">Privacy Policy (We promise not to care *too* much)</a>
+    </p>
+  </footer>
+  <script src="script.js" defer></script>
+
+  </body>
+</html>
