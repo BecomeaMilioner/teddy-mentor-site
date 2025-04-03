@@ -103,9 +103,9 @@ h1 { /* עיצוב הכותרת */
 
 #message { /* עיצוב אזור ההודעות */
     text-align: center;
-    margin-top: 20px;
-    font-size: 1.5em;
-    color: green;
+    margin-top: 30px;
+    font-size: 2em;
+    color: darkgreen;
     font-weight: bold;
     min-height: 2em; /* לתת לו קצת גובה קבוע */
 }
