@@ -520,6 +520,63 @@ footer a:hover {
    .modal-title {
       font-size: 1.5em;
    }
+  /* === Styles for Shop Promo Button (Add to style.css) === */
+.shop-promo-section {
+    padding: 10px 20px 30px 20px; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.shop-promo-button {
+    display: inline-block;
+    padding: 18px 35px; /* Padding generous for bigger button */
+    font-size: clamp(1.3em, 3.5vw, 1.6em); /* Larger font size */
+    font-weight: bold;
+    color: var(--text-dark); /* Dark text for contrast on yellow */
+    background: linear-gradient(45deg, var(--button-gimmick-bg), var(--button-gimmick-hover)); /* Yellow/Gold gradient */
+    border: none;
+    border-radius: 50px; /* Rounded corners */
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--box-shadow-light);
+    position: relative; /* Needed for the shimmer effect */
+    overflow: hidden; /* Needed for the shimmer effect */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.shop-promo-button small {
+    display: block; /* Make disclaimer appear on new line */
+    font-size: 0.5em; /* Much smaller font */
+    font-weight: normal;
+    text-transform: none; /* Normal casing */
+    letter-spacing: 0;
+    opacity: 0.8;
+    margin-top: 3px;
+}
+
+.shop-promo-button:hover {
+    transform: scale(1.05) translateY(-3px); /* Slightly bigger on hover */
+    box-shadow: var(--box-shadow-heavy);
+}
+
+/* Shimmer Animation on Hover */
+.shop-promo-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start off screen */
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); /* White shine */
+    transition: left 0.6s ease; /* Speed of shimmer */
+    transform: skewX(-25deg); /* Angle the shine */
+}
+
+.shop-promo-button:hover::before {
+    left: 150%; /* Move across the button */
+}
+/* === END of Styles for Shop Promo Button === */
     .modal p {
        font-size: 1em;
    }
