@@ -1,0 +1,111 @@
+/* --- קוד קיים --- */
+body { /* נוסיף עיצוב בסיסי לדף */
+  font-family: Arial, sans-serif; /* או פונט אחר שתבחר */
+  background-color: #e8f0f2; /* צבע רקע בהיר */
+}
+
+h1 { /* עיצוב הכותרת */
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px; /* קצת פחות רווח מתחת לכותרת */
+  font-size: 2.5em; /* הגדלת הכותרת */
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-gap: 15px;
+  margin: 20px auto;
+  perspective: 600px; /* הגדלת הפרספקטיבה לאפקט עמוק יותר */
+  max-width: calc(4 * 120px + 3 * 15px); /* להתאים את רוחב הלוח לקלפים */
+}
+
+.card {
+  width: 120px;
+  height: 120px;
+  /* background-color: #f0f0f0; - נסיר כי נגדיר רקעים לגב/פנים */
+  border: 1px solid #ccc;
+  cursor: pointer;
+  position: relative; /* חשוב למיקום הפנים/גב */
+  transform-style: preserve-3d;
+  transition: transform 0.6s; /* נאריך מעט את האנימציה */
+  border-radius: 8px; /* פינות מעוגלות */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* צל קל */
+}
+
+/* --- שינויים והוספות --- */
+
+/* מיכל פנימי שיסתובב עם הקלף */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* כשמוסיפים את הקלאס flipped לקלף החיצוני, המיכל הפנימי יסתובב */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* סגנון משותף לגב ולפנים */
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px; /* לשמור על פינות מעוגלות */
+  overflow: hidden; /* למנוע גלישה של התמונה */
+}
+
+/* עיצוב הגב של הקלף (מה שרואים בהתחלה) */
+.card-back {
+  background-color: #4a90e2; /* צבע רקע כחול לגב הקלף */
+  color: white;
+  font-size: 3em; /* גודל סימן השאלה */
+  /* אפשר לשים פה תמונה במקום צבע וטקסט: */
+  /* background-image: url('images/card_back_pattern.png'); */
+  /* background-size: cover; */
+}
+
+/* עיצוב הפנים של הקלף (התמונה) */
+.card-front {
+  background-color: #fff; /* רקע לבן מאחורי התמונה */
+  transform: rotateY(180deg); /* הפנים מתחילים הפוכים */
+}
+
+.card-front img {
+  max-width: 90%; /* קצת רווח מהקצוות */
+  max-height: 90%;
+  display: block; /* מונע רווחים מיותרים */
+}
+
+/* סגנון לקלפים שנמצאו (אופציונלי) */
+.card.matched {
+  /* אפשר להוריד שקיפות או לשנות גבול כדי לסמן שנמצא */
+  opacity: 0.7;
+  cursor: default;
+  box-shadow: none; /* להסיר צל */
+}
+
+/* הסרת הכלל הבעייתי שהיה קודם */
+/* .card.flipped img {
+   display: block;
+   transform: rotateY(180deg);
+} */
+
+#message { /* עיצוב אזור ההודעות */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: green;
+    font-weight: bold;
+    min-height: 2em; /* לתת לו קצת גובה קבוע */
+}
